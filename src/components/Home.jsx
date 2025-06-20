@@ -2,25 +2,20 @@ import { motion } from "framer-motion";
 
 function Home() {
   return (
-    <>
-      <motion.h1
-        animate={{
-          fontSize: 60,
-          color: "#fae300",
-          x: 50,
-          y: 100,
-        }}
-      >
-        Welcome to Motion
-      </motion.h1>
+    <motion.div
+      className="max-w-2xl mx-auto pt-10"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
       <motion.button
-        animate={{
-          scale: 1.5,
-        }}
+        className="px-2 py-2 text-white bg-black rounded-md"
+        initial={{ x: "-100vw" }}
+        animate={{ x: 0 }}
+        transition={{ delay: 0.4, type: "spring", stiffness: 120 }}
       >
         Let's go!
       </motion.button>
-    </>
+    </motion.div>
   );
 }
 
