@@ -16,6 +16,12 @@ const containerVariants = {
   },
 };
 
+// variants를 이용한 부모-자식 간 애니메이션 전파
+// - 부모에 initial, animate 설정하면 자식은 생략 가능
+// - 자식은 variants만 선언해도 작동함
+// - 애니메이션 상태(initial, animate)는 부모에서 전파됨
+// → 코드 반복 없이 깔끔하게 작성 가능!
+
 function Home() {
   return (
     <motion.div
